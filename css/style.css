@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: "Quicksand", sans-serif;
+    gap: 16px;
+    max-width: 900px; /* Define o limite máximo */
+    width: 100%; /* Permite que seja responsivo */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100%;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+}
+
+.cabecalho .titulo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cabecalho .subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.cabecalho .descricao {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.cabecalho .botao {
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cabecalho .botao:hover {
+    background-color: #45A049;
+}
+
+.descricao {
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.descricao .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    column-count: 2;
+    column-gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.descricao h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.descricao p,
+.descricao ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.descricao ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+    width: 100%;
+    padding: 10px 20px;
+    padding-bottom: 30px;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+.depoimentos .slide{
+    cursor: grab;
+}
+
+.depoimentos .slide:active{
+    cursor: grabbing;
+}
+
+.depoimentos i{
+    font-size: 90px;
+    color: #d3d3d3;
+}
+
+.depoimentos p.depoi-txt{
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.slide .person{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slide .person img{
+    width: 80px;
+    height: 80px;
+}
+
+.slide .person p.nome-person{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.slide .person p.nome-person{
+    font-size: 14px;
+}
+
+/* PLANOS */
+
+.cards {
+    display: flex;
+    padding: 32px;
+}
+
+.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+.cards section.card:first-child {
+    margin-left: 0;
+}
+
+.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+.cards section.card img {
+    width: 100%;
+}
+
+.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+.cards section.card span {
+    font-weight: 10;
+    max-width: 240px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+.cards section.card.planos button {
+    background: linear-gradient(to right, darkgreen, green);
+}
+
+.cards section.card.planos {
+    box-shadow: 20px 20px 50px -10px grey;
+}
+
+
+/* FAQ */
+.faq h2 {
+    margin-bottom: 2rem;
+}
+
+.faq {
+    padding: 2rem 1rem;
+}
+
+.faq details {
+    margin-bottom: 1rem;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq p {
+    margin: 0.5rem 0 0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 720px) {
+
+    /* Cabeçalho */
+    .cabecalho .titulo {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho .subtitulo {
+        font-size: 1.2rem;
+    }
+
+    /* Descrição */
+    .descricao .texto {
+        display: block; /* Remove colunas */
+        column-count: unset;
+        padding: 1rem;
+    }
+
+    .descricao p,
+    .descricao ul {
+        font-size: 0.9rem; /* Reduz tamanho do texto para caber melhor */
+    }
+
+    /* Depoimentos */
+    .depoimentos {
+        padding: 1rem;
+    }
+
+    .depoimentos .slide {
+        font-size: 0.9rem;
+    }
+
+    .depoimentos .person img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Planos */
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    .cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    .cards section.card button {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cabecalho .titulo {
+        font-size: 2rem;
+    }
+
+    .cabecalho .subtitulo {
+        font-size: 1rem;
+    }
+
+    .cabecalho .descricao {
+        font-size: 0.9rem;
+    }
+
+    .depoimentos i {
+        font-size: 70px;
+    }
+
+    .depoimentos .person img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cards section.card h3 {
+        font-size: 1rem;
+    }
+
+    .cards section.card span {
+        font-size: 0.8rem;
+    }
+}
