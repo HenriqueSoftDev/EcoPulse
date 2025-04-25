@@ -1,111 +1,248 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+/* GERAL */
 
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     font-family: "Quicksand", sans-serif;
-    gap: 16px;
-    max-width: 900px; /* Define o limite máximo */
-    width: 100%; /* Permite que seja responsivo */
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 100%;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
+    color: #333;
+    width: 100%;
 }
+
+main {
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+
 
 /* CABEÇALHO */
 
+
+
 .cabecalho {
     text-align: center;
-    margin: 2rem auto;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
+    background-image: url("css-assets/background-veg.png");
+    background-size: cover;
+    color: white;
+    position: relative;
+    z-index: 1;
+    min-height: 400px;
+}
+
+.cabecalho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .cabecalho .titulo {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .logo {
+    max-width: 400px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
 .cabecalho .subtitulo {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #555;
+    color: #fff;
+    word-wrap: break-word;
 }
 
 .cabecalho .descricao {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: #666;
+    color: #fff;
 }
 
 .cabecalho .botao {
     padding: 0.75rem 1.5rem;
-    background-color: #4CAF50;
+    background-color: darkgreen;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .cabecalho .botao:hover {
     background-color: #45A049;
 }
 
-.descricao {
-    margin: 2rem auto;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
 
-.descricao .texto {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    column-count: 2;
-    column-gap: 2rem;
+
+/* DESCRIÇÃO */
+
+
+
+.descricao {
     padding: 2rem 1rem;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: 2rem auto;
+    margin-bottom: 0rem;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .descricao h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
-    width: 100%;
+    margin-bottom: 1.5rem;
+    color: #2b2b2b;
+}
+
+.descricao .texto p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descricao .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.descricao .item {
     text-align: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    width: 300px;
+    /* Animação */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.descricao p,
-.descricao ul {
+.descricao .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.descricao .item i {
+    font-size: 2.5rem;
+    color: darkgreen;
+    margin-bottom: 1rem;
+}
+
+.descricao .item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.descricao .item p {
     font-size: 1rem;
-    line-height: 1.6;
+    color: #666;
 }
 
-.descricao ul {
-    padding-left: 1.5rem;
-    list-style-type: disc;
+
+
+/* FUNCIONAMENTO */
+
+
+.funcionamento {
+    position: relative;
+    padding-top: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 100%;
 }
 
-/* DEPOIMENTOS */
+.funcionamento h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+    color: black;
+    z-index: 0;
+}
+
+.lista-funcionamento {
+    list-style: none;
+    counter-reset: step;
+    padding: 1rem;
+}
+
+.lista-funcionamento li {
+    counter-increment: step;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgb(65, 102, 65);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+}
+
+.lista-funcionamento strong {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+.lateral-imagem {
+    position: absolute;
+    top: 0px;
+    margin-top: 0px;
+    width: 200px;
+}
+
+.lateral-imagem.esquerda {
+    left: 0px;
+}
+
+.lateral-imagem.direita {
+    right: 0px;
+}
+
+
+/* DEPOIMENTOS - SWIPER */
+
+
 
 .depoimentos{
-    width: 100%;
-    padding: 10px 20px;
+    padding: 10px 0px;
     padding-bottom: 30px;
-    max-width: 900px;
     position: relative;
     overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: darkgreen;
 }
 
 .depoimentos .slide{
@@ -117,40 +254,71 @@ body {
 }
 
 .depoimentos i{
-    font-size: 90px;
-    color: #d3d3d3;
+    font-size: 20px;
+    color: darkgreen;
+}
+
+.info-person{
+    text-align: left;
+}
+
+.info-person i{
+    color: rgb(255, 230, 0);
 }
 
 .depoimentos p.depoi-txt{
-    font-weight: 300;
-    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .slide .person{
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 20px;
 }
 
 .slide .person img{
     width: 80px;
     height: 80px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.slide .person p.nome-person{
+    font-size: 32px;
+    font-weight: 900;
 }
 
 .slide .person p.nome-person{
     font-size: 18px;
-    font-weight: 600;
 }
 
-.slide .person p.nome-person{
-    font-size: 14px;
-}
 
-/* PLANOS */
+
+/* CARDS - PLANOS */
+
+
 
 .cards {
     display: flex;
-    padding: 32px;
+    gap: 1.5rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.planos-title{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    max-width: 1000px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .cards section.card {
@@ -159,19 +327,23 @@ body {
     align-items: center;
     text-align: center;
     background: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    max-height: 468px;
-    margin-left: 32px;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    /* Animação */
+    transition: transform 0.3s ease; 
 }
 
-.cards section.card:first-child {
-    margin-left: 0;
+.cards section.card:hover {
+    transform: scale(1.05);
 }
 
 .cards section.card .icon {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
 }
 
 .cards section.card img {
@@ -179,29 +351,41 @@ body {
 }
 
 .cards section.card h3 {
-    font-size: 100%;
-    margin: 16px 0;
+    font-size: 1.1rem;
+    margin: 8px;
+}
+
+.cards section.card ul {
+    display: grid;
+    padding-inline-start: 20px;
+    align-items:normal;
+    min-height: 120px;
+}
+
+.cards section.card li {
+    max-width: 300px;
+    font-size: 1.1rem;
 }
 
 .cards section.card span {
-    font-weight: 10;
-    max-width: 240px;
-    font-family: "Quicksand", sans-serif;
-    font-size: 80%;
-    margin-bottom: 16px;
+    font-weight: bold;
+    max-width: 320px;
+    margin-bottom: 5%;
+    margin-top: auto;
+    vertical-align: bottom;
 }
 
 .cards section.card button {
     padding: 0.5rem 1rem;
-    text-transform: uppercase;
     border-radius: 32px;
     border: 0;
     cursor: pointer;
-    font-family: "Quicksand", sans-serif;
-    font-size: 80%;
-    font-weight: 500;
+    font-size: 100%;
+    font-weight: 450;
     color: #fff;
     margin-bottom: 16px 0;
+    margin-top: 10px;
+    font-family: "Quicksand", sans-serif;
 }
 
 .cards section.card.planos button {
@@ -209,17 +393,28 @@ body {
 }
 
 .cards section.card.planos {
-    box-shadow: 20px 20px 50px -10px grey;
+    box-shadow: 20px 20px 50px -10px rgb(65, 102, 65);
 }
+
 
 
 /* FAQ */
-.faq h2 {
-    margin-bottom: 2rem;
-}
+
+
 
 .faq {
+    margin-top: 2rem;
     padding: 2rem 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.faq h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .faq details {
@@ -227,107 +422,74 @@ body {
 }
 
 .faq summary {
+    font-size: 1.2rem;
     cursor: pointer;
     font-weight: bold;
 }
 
 .faq p {
     margin: 0.5rem 0 0;
+    font-size: 1.2rem;
 }
+
+
+
+/* FOOTER */
+
+
 
 footer {
-    background: #333;
-    color: white;
     text-align: center;
     padding: 1rem;
-
+    background: #193014;
+    color: #fff;
+    margin-top: 2rem;
+    
 }
 
-/*RESPONSIVIDADE*/
 
-@media screen and (max-width: 720px) {
 
-    /* Cabeçalho */
+/* RESPONSIVIDADE */
+
+
+
+@media screen and (max-width: 768px) {
     .cabecalho .titulo {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .cabecalho .subtitulo {
         font-size: 1.2rem;
     }
 
-    /* Descrição */
-    .descricao .texto {
-        display: block; /* Remove colunas */
-        column-count: unset;
-        padding: 1rem;
+    .descricao h2,
+    .faq h2 {
+        font-size: 1.5rem;
     }
 
-    .descricao p,
-    .descricao ul {
-        font-size: 0.9rem; /* Reduz tamanho do texto para caber melhor */
+    .faq summary {
+        font-size: 1rem;
+        word-wrap: break-word;
     }
 
-    /* Depoimentos */
-    .depoimentos {
-        padding: 1rem;
-    }
 
-    .depoimentos .slide {
-        font-size: 0.9rem;
-    }
-
-    .depoimentos .person img {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* Planos */
-    .cards {
-        flex-direction: column;
-    }
-
-    .cards section.card {
-        margin-left: 0;
-        margin-bottom: 32px;
-    }
-
-    .cards section.card:last-child {
-        margin-bottom: 0;
-    }
-
-    .cards section.card button {
-        font-size: 70%;
-    }
 }
 
+/* Para dispositivos menores que 480px */
 @media screen and (max-width: 480px) {
     .cabecalho .titulo {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .cabecalho .subtitulo {
         font-size: 1rem;
     }
 
-    .cabecalho .descricao {
+    .faq h2 {
+        font-size: 1.3rem;
+    }
+
+    .faq summary {
         font-size: 0.9rem;
-    }
-
-    .depoimentos i {
-        font-size: 70px;
-    }
-
-    .depoimentos .person img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .cards section.card h3 {
-        font-size: 1rem;
-    }
-
-    .cards section.card span {
-        font-size: 0.8rem;
     }
 }

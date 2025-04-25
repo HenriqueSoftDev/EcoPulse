@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoPulse - A Plataforma que Transforma Seus Hábitos em Impacto Positivo">
     <title>EcoPulse</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -12,84 +13,146 @@
 </head>
 
 <body>
-    <article>
+    <main>
         
         <div class="principal">
 
-            <section class="cabecalho">
-                <h1 class="titulo">EcoPulse</h1>
+            <header class="cabecalho">
+
+                <h1 class="titulo">
+                    <img src="assets/logotipo.png" alt="EcoPulse Logo" class="logo">
+                </h1>
+                
                 <h2 class="subtitulo">A Plataforma que Transforma Seus Hábitos em Impacto Positivo</h2>
-                <p class="descricao">Reduza sua pegada de carbono sem mudar seu estilo de vida.</p>
-                <button class="botao">Criar meu EcoScore</button>
-            </section>
+                <p>Reduza sua pegada de carbono sem mudar seu estilo de vida.</p>
+                <button class="botao" aria-label="Crie seu EcoScore ou faça Login" title="Leva menos de 2 minutos!">Criar meu EcoScore</button>
+            </header>
             
-            <hr>
-            
+  
             <section class="descricao">
                 <h2>O que é o EcoPulse?</h2>
                 <div class="texto">
                     <p>EcoPulse é um serviço digital que conecta suas escolhas do dia a dia (como transporte,
                         alimentação e consumo de energia) com ações ambientais reais. Usando inteligência
                         artificial e APIs integradas com apps que você já usa, como Google Maps, iFood, Uber e
-                        outros, o EcoPulse analisa suas rotinas e:</p>
-                    <ul>
-                        <li>Calcula automaticamente sua emissão de carbono.</li>
-                        <li>Sugere pequenas mudanças de hábito com grande impacto.</li>
-                        <li>Compensa suas emissões com plantio de árvores, apoio a energia limpa e reciclagem automatizada.</li>
-                        <li>Te transforma em um Agente Verde certificado, com direito a vantagens exclusivas em empresas
-                            parceiras.</li>
-                    </ul>
+                        outros, o EcoPulse transforma a sua vida e a do nosso planeta, sugerindo e executando:
+                        </p>
+                </div>
+                <div class="grid-container">
+                    <div class="item">
+                        <i class="bi bi-calculator-fill"></i>
+                        <h3>Calculo Automático</h3>
+                        <p>Calcula automaticamente sua emissão de carbono.</p>
+                    </div>
+                    <div class="item">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h3>Melhorias</h3>
+                        <p>Sugere pequenas mudanças de hábito com grande impacto.</p>
+                    </div>
+                    <div class="item">
+                        <i class="bi bi-tree"></i>
+                        <h3>Compensação</h3>
+                        <p>Compensa suas emissões com plantio de árvores, apoio a energia limpa e reciclagem automatizada.</p>
+                    </div>
+                    <div class="item">
+                        <i class="bi bi-patch-check"></i>
+                        <h3>Certificação Verde</h3>
+                        <p>Te transforma em um Agente Verde certificado, com direito a vantagens exclusivas em empresas parceiras.</p>
+                    </div>
                 </div>
             </section>
+            
 
+            <section class="funcionamento">
+
+                <img src="assets/ramo-esquerda.png" alt="Ilustração de ramo à Esquerda" class="lateral-imagem esquerda">
+
+                <h2>Como funciona?</h2>
+                <ol class="lista-funcionamento">
+                    <li>
+                        <strong>Conecte seus apps favoritos:</strong>
+                        Em poucos cliques, você sincroniza seus apps com o EcoPulse.
+                    </li>
+                    <li>
+                        <strong>Receba seu EcoScore:</strong>
+                        Um índice 100% personalizado que mostra o impacto ambiental das suas escolhas.
+                    </li>
+                    <li>
+                        <strong>Transforme impacto em ação:</strong>
+                        Compense suas emissões automaticamente ou manualmente, e receba recompensas por cada ação sustentável.
+                    </li>
+                    <li>
+                        <strong>Compartilhe sua jornada:</strong>
+                        Compartilhamento fácil para redes sociais, com badges, metas e desafios entre amigos.
+                    </li>
+                </ol>
+
+                <img src="assets/ramo-direita.png" alt="Ilustração de ramo à Direita" class="lateral-imagem direita">
+
+            </section>            
+            
             <section class="depoimentos mySwiper">
-
+                <h2 class="depoimentos-title" aria-label="Depoimentos de Usuários"></h2>
                 <div class="depoimentos-container swiper-wrapper">
-
+                    
                     <div class="slide swiper-slide">
-                        <i class="bi bi-quote"></i>
+                        <i class="bi bi-quote">O que os usuários estão dizendo?</i>
                         <p class="depoi-txt">
                             “Nunca imaginei que fosse tão fácil fazer diferença. Só conectei meus apps e pronto: já
                             estou ajudando a reflorestar a Amazônia!”
                         </p>
 
                         <div class="person">
-                            <img src="assets/foto1.png" alt="">
+                            <img src="assets/icon1.png" alt="Ícone do primeiro usuário">
                             <div class="info-person">
                                 <p class="nome-person">Camila F.</p>
                                 <p class="func-person">São Paulo</p>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
                             </div>
                         </div>
                     </div>
 
                     <div class="slide swiper-slide">
-                        <i class="bi bi-quote"></i>
+                        <i class="bi bi-quote">O que os usuários estão dizendo?</i>
                         <p class="depoi-txt">
                             “Transformei meu impacto em pontos, ganhei desconto no cinema e ainda ajudei uma
                             ONG local. Isso sim é futuro!”
                         </p>
 
                         <div class="person">
-                            <img src="assets/foto2.png" alt="">
+                            <img src="assets/icon2.png" alt="Ícone do segundo usuário">
                             <div class="info-person">
                                 <p class="nome-person">Rodrigo M.</p>
                                 <p class="func-person">Recife</p>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
                             </div>
                         </div>
                     </div>
 
                     <div class="slide swiper-slide">
-                        <i class="bi bi-quote"></i>
+                        <i class="bi bi-quote">O que os usuários estão dizendo?</i>
                         <p class="depoi-txt">
                             “Adoro ver meu progresso semanal e competir com meus amigos. É tipo um jogo… só que
                             salvando o planeta!”
                         </p>
 
                         <div class="person">
-                            <img src="assets/foto3.png" alt="">
+                            <img src="assets/icon3.png" alt="Ícone do terceiro usuário">
                             <div class="info-person">
                                 <p class="nome-person">Lívia T.</p>
                                 <p class="func-person">Belo Horizonte</p>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
                             </div>
                         </div>
                     </div>
@@ -99,7 +162,7 @@
             </section>
 
             <section class="planos">
-                <h2>Planos para todos os perfis</h2>
+                <h2 class="planos-title">Planos para todos os perfis</h2>
 
                 <div class="cards">
 
@@ -107,31 +170,50 @@
                         <div class="icon">
                             <img src="assets/rooter.png" alt="Raiz">
                         </div>
-                        <h3>Plano Raiz </br> Gratuito</h3>
+                        <h3>Plano Raiz <br> Gratuito</h3>
+                        <ul>
+                            <li>Acesso ao EcoScore básico</li>
+                            <li>Sugestões de melhorias sustentáveis</li>
+                            <li>Relatórios mensais de impacto</li>
+                            <li>Participação em desafios e ranking</li>
+                        </ul>
                         <span>
                             Ideal para quem está começando e quer entender seu impacto
                         </span>
-                        <button>Saiba mais</button>
+                        <button title="Saiba mais sobre o plano" aria-label="Saiba mais sobre o plano Gratuito">Saiba Mais</button>
                     </section>
 
                     <section class="card planos">
                         <div class="icon">
                             <img src="assets/leaf.png" alt="Folha">
                         </div>
-                        <h3>Plano Folha </br> R$ 19/mês</h3>
+                        <h3>Plano Folha <br> R$ 19/mês</h3>
+                        <ul>
+                            <li>Tudo do plano Raiz</li>
+                            <li>Compensação automática mensal de carbono</li>
+                            <li>Plantio de 2 árvores/mês em seu nome</li>
+                            <li>Acesso a cupons e parcerias sustentáveis</li>
+                        </ul>
                         <span>
                             Perfeito para quem quer praticidade e impacto real.
                         </span>
-                        <button>Saiba mais</button>
+                        <button title="Saiba mais sobre o plano" aria-label="Saiba mais sobre o plano Raiz">Saiba Mais</button>
                     </section>
 
                     <section class="card planos">
                         <div class="icon">
                             <img src="assets/floresta.png" alt="Floresta">
                         </div>
-                        <h3>Plano Floresta </br> R$ 49/mês</h3>
+                        <h3>Plano Floresta <br> R$ 49/mês</h3>
+                        <ul>
+                            <li>Tudo dos planos anteriores</li>
+                            <li>Impacto triplo: compensação, educação e doação</li>
+                            <li>Acompanhamento em tempo real de projetos apoiados</li>
+                            <li>Badge exclusivo “Agente Verde Pro”</li>
+                            <li>1 sessão de mentoria ambiental por mês</li>
+                        </ul>
                         <span>Para quem quer liderar a mudança.</span>
-                        <button>Saiba mais</button>
+                        <button title="Saiba mais sobre o plano" aria-label="Saiba mais sobre o plano Floresta">Saiba Mais</button>
                     </section>
 
                 </div>
@@ -140,25 +222,27 @@
             <section class="faq">
                 <h2>Perguntas Frequentes (FAQs)</h2>
                 <details>
-                    <summary>Como o EcoPulse calcula minha pegada?</summary>
-                    <p>Usamos dados de aplicativos conectados e algoritmos confiáveis para estimar sua pegada de
-                        carbono.</p>
+                    <summary>Como o EcoPulse calcula meu impacto?</summary>
+                    <p>Usamos dados dos apps conectados e modelos reconhecidos de cálculo de emissões
+                        para estimar sua pegada de carbono</p>
                 </details>
                 <details>
-                    <summary>O EcoPulse é gratuito?</summary>
-                    <p>Sim! Oferecemos um plano gratuito com funcionalidades básicas.</p>
+                    <summary>Preciso pagar para usar?</summary>
+                    <p>Não! Temos um plano gratuito com recursos essenciais. Planos pagos oferecem mais
+                        comodidades e impacto ampliado.</p>
                 </details>
                 <details>
                     <summary>Minhas ações realmente fazem diferença?</summary>
-                    <p>Sim! Cada pequena ação ajuda a criar um impacto significativo para o planeta.</p>
+                    <p>Sim! Todas as compensações e ações são auditadas e ligadas a projetos reais, com
+                        impacto rastreável e transparente.</p>
                 </details>
             </section>
 
             <footer>
-                <p>Desenvolvido por Henrique José Da Silva</p>
+                <p>Copyright ©2025 - Desenvolvido por Henrique José Da Silva</p>
             </footer>
         </div>
-    </article>
+    </main>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

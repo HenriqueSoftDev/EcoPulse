@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay:3500,
+        delay:2800,
         disableOnInteraction: false,
     },
   });
